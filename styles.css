@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    padding-bottom: 70px; 
+}
+
+/* --- Barra Superior --- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #111;
+    border-bottom: 2px solid #009edb;
+}
+
+.header-title { display: flex; align-items: center; gap: 10px; }
+.header-title h1 { font-size: 16px; font-weight: 400; }
+.header-lang { font-size: 14px; cursor: pointer; }
+
+/* --- Controles y Selector --- */
+.controls {
+    padding: 20px 15px;
+    border-bottom: 1px solid #333;
+}
+
+.controls h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #009edb;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* --- Dashboard --- */
+.dashboard {
+    padding: 20px 15px;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Tarjetas de Estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #009edb;
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.stat-card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Gráfico */
+.chart-container {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    height: 300px;
+    position: relative;
+}
+
+/* --- Barra de Navegación Inferior --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #aaa;
+    font-size: 10px;
+    width: 25%;
+}
+
+.nav-item.active { color: #009edb; }
+.nav-icon { font-size: 20px; margin-bottom: 5px; }
+
+/* Para pantallas más grandes (Tablet/PC) */
+@media (min-width: 600px) {
+    .stats-grid { grid-template-columns: repeat(3, 1fr); }
+}

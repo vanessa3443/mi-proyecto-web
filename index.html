@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal ODS - Panel de Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Librería para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <div class="header-title">
+            <span class="icon">🌍</span>
+            <h1>Portal de Desarrollo Sostenible</h1>
+        </div>
+        <div class="header-lang">Español ▼</div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Controles de Selección -->
+        <section class="controls">
+            <h2>Selecciona un País para ver sus indicadores ODS</h2>
+            <select id="country-selector">
+                <option value="" disabled selected>-- Elige un país --</option>
+                <!-- Las opciones se cargan con JS -->
+            </select>
+        </section>
+
+        <!-- Contenedor de Datos (Oculto hasta seleccionar país) -->
+        <section id="dashboard" class="dashboard hidden">
+            
+            <!-- Tarjetas de Resumen (Comunicación de datos numéricos) -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Población Total</h3>
+                    <p id="stat-population">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Esperanza de Vida</h3>
+                    <p id="stat-life">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Índice de Pobreza</h3>
+                    <p id="stat-poverty">-</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Interactivo -->
+            <div class="chart-container">
+                <canvas id="odsChart"></canvas>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Barra de Navegación Inferior (Igual a tu diseño) -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active"><span class="nav-icon">📊</span><span class="nav-text">Dashboard</span></a>
+        <a href="#" class="nav-item"><span class="nav-icon">🌐</span><span class="nav-text">Países</span></a>
+        <a href="#" class="nav-item"><span class="nav-icon">📈</span><span class="nav-text">Reportes</span></a>
+        <a href="#" class="nav-item"><span class="nav-icon">⚙️</span><span class="nav-text">Ajustes</span></a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal ODS - Panel de Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Librería para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <div class="header-title">
+            <span class="icon">🌍</span>
+            <h1>Portal de Desarrollo Sostenible</h1>
+        </div>
+        <div class="header-lang">Español ▼</div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Controles de Selección -->
+        <section class="controls">
+            <h2>Selecciona un País para ver sus indicadores ODS</h2>
+            <select id="country-selector">
+                <option value="" disabled selected>-- Elige un país --</option>
+                <!-- Las opciones se cargan con JS -->
+            </select>
+        </section>
+
+        <!-- Contenedor de Datos (Oculto hasta seleccionar país) -->
+        <section id="dashboard" class="dashboard hidden">
+            
+            <!-- Tarjetas de Resumen (Comunicación de datos numéricos) -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Población Total</h3>
+                    <p id="stat-population">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Esperanza de Vida</h3>
+                    <p id="stat-life">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Índice de Pobreza</h3>
+                    <p id="stat-poverty">-</p>
+                </div>
+            </div>
+
+            <!-- Gráfico Interactivo -->
+            <div class="chart-container">
+                <canvas id="odsChart"></canvas>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Barra de Navegación Inferior (Igual a tu diseño) -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active"><span class="nav-icon">📊</span><span class="nav-text">Dashboard</span></a>
+        <a href="#" class="nav-item"><span class="nav-icon">🌐</span><span class="nav-text">Países</span></a>
+        <a href="#" class="nav-item"><span class="nav-icon">📈</span><span class="nav-text">Reportes</span></a>
+        <a href="#" class="nav-item"><span class="nav-icon">⚙️</span><span class="nav-text">Ajustes</span></a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
